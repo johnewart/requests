@@ -1,0 +1,17 @@
+dependencies:
+  build:
+    - python:3.7.3
+
+build_targets:
+  - name: default
+    commands:
+      - pip install --upgrade pip
+      - pip install -e .[socks]
+      - pip install -r requirements-dev.txt
+      - pip install pytest coverage pytest-cov
+      - pytest tests --junitxml=report.xml
+
+ci:
+  builds:
+    - name: default
+      build_target: default
