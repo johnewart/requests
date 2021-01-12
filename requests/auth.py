@@ -129,6 +129,8 @@ class HTTPDigestAuth(AuthBase):
         :rtype: str
         """
 
+        # Build a digest header
+        
         realm = self._thread_local.chal['realm']
         nonce = self._thread_local.chal['nonce']
         qop = self._thread_local.chal.get('qop')
