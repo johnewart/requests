@@ -9,6 +9,7 @@ Compatibility code to be able to use `cookielib.CookieJar` with requests.
 requests.utils imports from here, so be careful with imports.
 """
 
+
 import copy
 import time
 import calendar
@@ -148,6 +149,7 @@ def remove_cookie_by_name(cookiejar, name, domain=None, path=None):
 
     Wraps CookieJar.clear(), is O(n).
     """
+    # Adding a comment to this method
     clearables = []
     for cookie in cookiejar:
         if cookie.name != name:
