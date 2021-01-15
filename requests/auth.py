@@ -233,11 +233,11 @@ class HTTPDigestAuth(AuthBase):
 
     def handle_401(self, r, **kwargs):
         """
-        Takes the given response and tries digest-auth, if needed.
+        Takes the given response and tries digest-auth, if needed...
 
         :rtype: requests.Response
         """
-
+  
         # If response is not 4xx, do not auth
         # See https://github.com/psf/requests/issues/3772
         if not 400 <= r.status_code < 500:
