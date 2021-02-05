@@ -5,6 +5,7 @@ dependencies:
 build_targets:
   - name: default
     commands:
+      - env
       - pip install --upgrade pip
       - pip install -e .[socks]
       - pip install -r requirements-dev.txt
