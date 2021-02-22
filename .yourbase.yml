@@ -5,7 +5,7 @@ dependencies:
 build_targets:
   - name: default
     environment: 
-      - SKIPPER_IGNORE=pip install pytest coverage pytest-cov
+      - SKIPPER_IGNORE=pip install pytest coverage pytest-cov;pip install -r requirements-dev.txt
       - PYTHONPATH=/workspace/tmp
     commands:
       - env
