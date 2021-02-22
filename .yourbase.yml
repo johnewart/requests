@@ -4,6 +4,8 @@ dependencies:
 
 build_targets:
   - name: default
+    environment: 
+      - SKIPPER_IGNORE=pip install pytest coverage pytest-cov
     commands:
       - env
       - pip install --upgrade pip
