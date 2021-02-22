@@ -6,8 +6,14 @@ build_targets:
   - name: default
     environment: 
       - SKIPPER_IGNORE=pip install pytest coverage pytest-cov
+      - PYTHONPATH=/workspace/tmp
     commands:
       - env
+      - apt -y update
+      - apt -y install unzip
+      - mkdir -p tmp
+      - cp /opt/yb/lib/python/yourbase.egg ./tmp
+      - unzip tmp/yourbase.egg
       - pip install --upgrade pip
       - pip install -e .[socks]
       - pip install -r requirements-dev.txt
